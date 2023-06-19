@@ -5,17 +5,14 @@ const loader = document.querySelector('#loader');
 const error = document.querySelector('#error');
 const catInfo = document.querySelector('#cat-info');
 
-// Показати або приховати елемент завантажувача
 function toggleLoader(showLoader) {
   loader.style.display = showLoader ? 'block' : 'none';
 }
 
-// Показати або приховати елемент помилки
 function toggleError(showError) {
   error.style.display = showError ? 'block' : 'none';
 }
 
-// Оновити вміст селекту з породами
 function updateBreedSelect(breeds) {
   breeds.forEach(breed => {
     const option = document.createElement('option');
@@ -29,7 +26,6 @@ function updateBreedSelect(breeds) {
   });
 }
 
-// Оновити вміст блоку з інформацією про кота
 function updateCatInfo(cat) {
   catInfo.innerHTML = '';
 
@@ -53,7 +49,6 @@ function updateCatInfo(cat) {
   catInfo.appendChild(catTemperament);
 }
 
-// Обробник події вибору породи
 breedSelect.addEventListener('change', async () => {
   const breedId = breedSelect.value;
   toggleLoader(true);
@@ -70,7 +65,6 @@ breedSelect.addEventListener('change', async () => {
   }
 });
 
-// Завантаження порід при завантаженні сторінки
 window.addEventListener('DOMContentLoaded', async () => {
   toggleLoader(true);
   toggleError(false);
