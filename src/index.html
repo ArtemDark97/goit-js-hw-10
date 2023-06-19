@@ -1,107 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 10</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slim-select/dist/slimselect.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notiflix@2.7.0/dist/notiflix-2.7.0.min.css">
-    <style>
-      .container {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homework 10</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <label for="breed-select">Select a breed:</label>
+    <select id="breed-select"></select>
+    <div id="loader" class="lds-dual-ring"></div>
+    <p id="error" class="notiflix-error">Oops! Something went wrong! Try reloading the page!</p>
+    <div id="cat-info"></div>
+  </div>
 
-      label {
-        font-size: 16px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        display: block;
-      }
-
-      select {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        margin-bottom: 20px;
-      }
-
-      #loader {
-        display: none;
-        margin-bottom: 20px;
-        text-align: center;
-      }
-
-      .lds-dual-ring {
-        display: inline-block;
-        width: 64px;
-        height: 64px;
-      }
-
-      .lds-dual-ring:after {
-        content: " ";
-        display: block;
-        width: 46px;
-        height: 46px;
-        margin: 1px;
-        border-radius: 50%;
-        border: 5px solid #000;
-        border-color: #000 transparent #000 transparent;
-        animation: lds-dual-ring 1.2s linear infinite;
-      }
-
-      @keyframes lds-dual-ring {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-      #error {
-        display: none;
-        font-weight: bold;
-        color: red;
-        margin-bottom: 20px;
-      }
-
-      #cat-info {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      #cat-info img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      h3 {
-        font-size: 24px;
-        margin-top: 10px;
-        margin-bottom: 5px;
-      }
-
-      p {
-        font-size: 16px;
-        margin-bottom: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <label for="breed-select">Select a breed:</label>
-      <select id="breed-select"></select>
-      <div id="loader" class="lds-dual-ring"></div>
-      <p id="error" class="notiflix-error">Oops! Something went wrong! Try reloading the page!</p>
-      <div id="cat-info"></div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/slim-select/dist/slimselect.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/notiflix@2.7.0/dist/notiflix-2.7.0.min.js"></script>
-    <script src="index.js" type="module"></script>
-  </body>
+  <script src="./js/index.js" type="module"></script>
+</body>
 </html>
